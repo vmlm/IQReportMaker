@@ -79,6 +79,15 @@ def get_tag_info(repo):
     return tags
 
 
+def get_commit_log(repo):
+    commits = []
+    itemlist_getter = (repo.git.shortlog, ('-sne', '--all'), splitlines=True)
+    item_finder = (pattern='(<.*>)', params="", method='search')
+    info_finder = (pattern='(<.*>)', params="", method='match')
+    
+
+
+
 def get_lastcommit_info(repo):
     last_commits = []
     shortlog_out = repo.git.shortlog('-sne', '--all').splitlines()
