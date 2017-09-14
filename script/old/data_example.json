@@ -1,0 +1,51 @@
+repos = [
+    {
+        "num": 1,
+        "name": "DSR-IQCM",
+        "lastcommit": {
+            "date": "12/12/2008",
+            "author": "Víctor Lara",
+            "state": "Correcto"
+        },
+        "branches": [
+            {
+                "name": "origin/master",
+                "date": "12/12/2008",
+                "author": "Víctor Lara",
+                "state": "Correcto"
+            },
+            {
+                "name": "origin/sdk9.32",
+                "date": "12/12/2008",
+                "author": "Víctor Lara",
+                "state": "Correcto"
+            }
+        ],
+        "tags": [
+            {
+                "name": "v2001",
+                "date": "12/12/2008",
+                "author": "Víctor Lara",
+                "state": "Correcto"
+            },
+            {
+                "name": "v2002",
+                "date": "12/05/2009",
+                "author": "Renzo Costa",
+                "state": "Correcto"
+            }
+        ],
+        "authors": [
+            {
+                "name": "Víctor Lara",
+                "email": "v.lara@iqcorpgroup.com",
+                "state": "Correcto"
+            },
+            {
+                "name": "Renzo Costa",
+                "email": "r.costa@iqcorpgroup.com",
+                "state": "Correcto"
+            }
+        ]
+    }
+]

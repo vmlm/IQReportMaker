@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Reporte de control de repositorio, {{ reportmonth }} de {{ reportyear }}</title>
+</head>
+<style type="text/css">
+    .header-cont {
+        min-width: 900px;
+        position: fixed;
+        top: 0em;
+        left: 0em;
+        height: 80px;
+        width: 100%;
+        background-color:#F0F0F0;
+        z-index: 2;
+        padding-left: 80px;
+        padding-top: 15px;
+        box-shadow: 3px 3px 5px #888888;
+    }
+
+    /* Navigation Menu - Background */
+    .navigation {
+      /* critical sizing and position styles */
+      width: 100%;
+      height: 100%;
+      padding-top: 82px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+      overflow-y: scroll;
+      
+      /* non-critical appearance styles */
+      list-style: none;
+      background: #f1f1f1;
+    }
+
+    /* Navigation Menu - List items */
+    .nav-item {
+      /* non-critical appearance styles */
+      width: 300px;
+    }
+
+    .nav-item a {
+      /* non-critical appearance styles */
+      display: block;
+      padding: 0.5em;
+      color: #3a3737;
+      font-family: "Verdana", "Geneva", Sans-Serif;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color 0.2s, background 0.5s;
+    }
+
+    .nav-item a:hover {
+      color: #7a2a2a;
+      background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(255, 109, 109,0.65) 100%);
+    }
+
+    /* Site Wrapper - Everything that isn't navigation */
+    .site-wrap {
+      /* Critical position and size styles */
+      min-height: 100%;
+      min-width: 100%;
+      background-color: white; /* Needs a background or else the nav will show through */
+      position: relative;
+      top: 1em;
+      bottom: 100%;
+      left: 0;
+      z-index: 1;
+      
+      /* non-critical apperance styles */
+      padding-left: 4em;
+      padding-top: 0.2em;
+      padding-bottom: 3em;
+      background-size: 200%;
+    }
+
+    /* Nav Trigger */
+    .nav-trigger {
+      /* critical styles - hide the checkbox input */
+      position: absolute;
+      clip: rect(0, 0, 0, 0);
+    }
+
+    label[for="nav-trigger"] {
+      /* critical positioning styles */
+      position: fixed;
+      left: 15px; top: 95px;
+      z-index: 2;
+      
+      /* non-critical apperance styles */
+      height: 30px;
+      width: 30px;
+      cursor: pointer;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+      background-size: contain;
+    }
+
+    /* Make the Magic Happen */
+    .nav-trigger + label, .site-wrap {
+      transition: left 0.2s;
+    }
+
+    .nav-trigger:checked + label {
+      left: 315px;
+    }
+
+    .nav-trigger:checked ~ .site-wrap {
+      left: 300px;
+      box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+    }
+
+    #report {
+        max-width: 600px;
+        margin-left: 20px;
+    }
+
+    .newspaper-a {
+        font-family: "Verdana", "Geneva", Sans-Serif;
+        font-size: 12px;
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+        border: 1px solid #605555;
+        margin: 20px;
+    }
+    .newspaper-a th {
+        font-weight: normal;
+        font-size: 14px;
+        color: #514c4c;
+        border-bottom: 1px dashed;
+        padding: 12px 17px;
+    }
+    .newspaper-a th.subtitle {
+        font-weight: bold; 
+        font-size: 16px; 
+        border-top: 1px dashed;
+    }
+    .newspaper-a td {
+        color: #605d5d;
+        padding: 7px 17px;
+    }
+    .newspaper-a tbody tr:hover td {
+        color: #7a2a2a;
+        background: #ffd6d6;
+    }
+
+    .anchor {
+        padding-top: 100px;
+    }
+
+    h1 {
+        font-family: "Verdana", "Geneva", Sans-Serif;
+        font-size: 32px;
+        text-shadow: 1px 2px #666666;
+        color: #e85b5b;
+    }
+    h2 {
+        font-family: "Verdana", "Geneva", Sans-Serif;
+        font-size: 24px;
+        color: #3a3737;
+        margin: 20px;
+        text-transform: uppercase;
+    }
+
+    body {
+        /* Without this, the body has excess horizontal scroll when the menu is open */
+      overflow-x: hidden;
+    }
+
+    /* Micro reset */
+    *,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
+    html, body { height: 100%; width: 100%; font-family: Helvetica, Arial, sans-serif; }
+</style>
+<body>
+    {% if repos|length > 1 %}
+    <ul class="navigation">
+        {% for repo in repos %}
+        <li class="nav-item"><a href="#repo{{repo.num}}">{{repo.name}}</a></li>
+        {% endfor %}
+    </ul>
+
+    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+    <label for="nav-trigger"></label>
+    {% endif %}
+    <div class="header-cont">
+        <div class="header">
+            <h1>IQ Reporte de repositorios, {{ reportmonth }} de {{ reportyear }}</h1>
+        </div>
+    </div>
+
+    <div class="site-wrap">
+        <main id="report">
+            {% for repo in repos %}
+            <div id="repo{{ repo.num }}">
+                <h2 class="anchor">{{ repo.name }}</h2>
+                <TABLE class="newspaper-a" summary="reporte repo{{ repo.num }}">
+                    <col style="width: 50%"/>
+                    <col style="width: 15%"/>
+                    <col style="width: 20%"/>
+                    <col style="width: 15%"/>
+                    {% if repo.status == 'ok' %}
+                    <tr>
+                        <th>ITEM</th>
+                        <th>FECHA</th>
+                        <th>AUTOR</th>
+                        <th>ESTADO</th>
+                    </tr>
+                    <!-- last commit -->
+                    <tr>
+                        <th colspan="4" class="subtitle">&Uacute;ltimas actualizaciones generales</th>
+                    </tr>
+                    {% for lastcommit in repo.lastcommits %}
+                    <tr>
+                        <td>{{ lastcommit.subject }}</td>
+                        <td>{{ lastcommit.date }}</td>
+                        <td>{{ lastcommit.author }}</td>
+                        <td>{{ lastcommit.state }}</td>
+                    </tr>
+                    {% else %}
+                        <td colspan="4">No hay commits</th>
+                    {% endfor %}
+                    <!-- branch updates -->
+                    <tr>
+                        <th colspan="4">&Uacute;ltima actualizaci&oacute;n por branch</th>
+                    </tr>
+                    {% for branch in repo.branches %}
+                    <TR>
+                        <td>{{ branch.name }}</td>
+                        <td>{{ branch.date }}</td>
+                        <td>{{ branch.author }}</td>
+                        <td>{{ branch.state }}</td>
+                    </TR>
+                    {% else %}
+                    <tr>
+                        <td colspan="4">No hay actualizaciones a las ramas</td>
+                    </tr>
+                    {% endfor %}
+                    <!-- DETALLE HEADER -->
+                    <tr>
+                        <th colspan="4" class="subtitle">Detalle</th>
+                    </tr>
+                    <!-- Tags pase a producción -->
+                    <tr>
+                        <th colspan="4">Tags de pase a producci&oacute;n</th>
+                    </tr>
+                    {% for tag in repo.tags %}
+                    <TR>
+                        <td>{{ tag.name }}</td>
+                        <td>{{ tag.date }}</td>
+                        <td>{{ tag.author }}</td>
+                        <td>{{ tag.state }}</td>
+                    </TR>
+                    {% else %}
+                    <tr>
+                        <td colspan="4">No hay tags</td>
+                    </tr>
+                    {% endfor %}
+                    <!-- Ramas de desarrollo creadas -->
+                    <tr>
+                        <th colspan="4">Branches activos</th>
+                    </tr>
+                    {% for branch in repo.branches %}
+                    <TR>
+                        <td colspan="4">{{ branch.name }}</td>
+                    </TR>
+                    {% else %}
+                    <tr>
+                        <td colspan="4">No hay ramas</td>
+                    </tr>
+                    {% endfor %}
+                    <!-- Denominación de commits -->
+                    <tr>
+                        <th colspan="4" class="subtitle">Denominaci&oacute;n de commits</th>
+                    </tr>
+                    <tr>
+                        <th>AUTOR</th>
+                        <th colspan="2">CORREO</th>
+                        <th>ESTADO</th>
+                    </tr>
+                    {% for author in repo.authors %}
+                    <TR>
+                        <td>{{ author.name }}</td>
+                        <td colspan="2">{{ author.email }}</td>
+                        <td>{{ author.state }}</td>
+                    </TR>
+                    {% else %}
+                    <tr>
+                        <td colspan="4">No hay autores</td>
+                    </tr>
+                    {% endfor %}
+                    <!-- MENSAJES -->
+                    <tr>
+                        <th colspan="4" class="subtitle">Mensajes del mes</th>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            {% for message in repo.messages%}
+                            {{ message }}<br>
+                            {% else %}
+                            No hay mensajes
+                            {% endfor %}
+                        </td>
+                    </tr>                    
+                    <!-- COMENTARIOS -->
+                    <tr>
+                        <th colspan="4" class="subtitle">Comentarios</th>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><p>Comentarios aqu&iacute;</p></td>
+                    </tr>
+                    {% elif repo.status == 'empty' %}
+                    <tr>
+                        <td colspan="4">Repositorio vac&iacute;o</td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="4">No se encontr&oacute; el repositorio</td>
+                    </tr>
+                    {% endif %}
+                </TABLE>
+            </div>
+            {% else %}
+            <h2>No hay repositorios que mostrar</h2>
+            {% endfor %}
+        </main>        
+    </div>
+</body>

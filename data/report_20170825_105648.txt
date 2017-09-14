@@ -1,0 +1,317 @@
+***** POS_INGE_C_SRT18_IBK ******
+=== Branches ===
+2017-07-17 12:30:02 -0500,Tino Reyna,<t.reyna@iqcorpgroup.com>,774074b2fd985f43a0e78362ded9bc6b2a799022,origin/master
+2017-05-12 10:56:51 -0500,Tino Reyna,<t.reyna@iqcorpgroup.com>,455a062c2d5ba7a55f01487a100a38b41eafc261,origin/FUENTES_1075_IBK_T1
+2017-04-25 12:16:13 -0500,Tino Reyna,<t.reyna@iqcorpgroup.com>,2a4944827119edc168fd3f897f86c73e2c825d77,origin/FUENTES_1074_IBK_T1 ,unmerged
+2017-04-21 12:10:23 -0500,Tino Reyna,<t.reyna@iqcorpgroup.com>,00e46d434622f34e21631d392750a8994a38c0aa,origin/FUENTES_1073_IBK_T1
+=== Tags ===
+=== Last commit ===
+2017-07-17 12:30:02 -0500,Tino Reyna,<t.reyna@iqcorpgroup.com>,774074b2fd985f43a0e78362ded9bc6b2a799022
+=== Last month messages ===
+ 
+ 
+***** POS_INGE_C_SRT42_IBK ******
+=== Branches ===
+2017-08-07 17:23:08 -0500,Tino Reyna,<t.reyna@iqcorpgroup.com>,a21746b01d1ebdddd33553ffde3b681fae5626cd,origin/FUENTES_IBK_2004_T2 ,unmerged
+2017-07-18 11:37:51 -0500,Tino Reyna,<t.reyna@iqcorpgroup.com>,7e725c6decba19a6850c767160af97ee1aa06e2e,origin/master
+2017-05-12 11:24:58 -0500,Tino Reyna,<t.reyna@iqcorpgroup.com>,49e80cc1f408284fb28bbeb154a66dc48823ec75,origin/FUENTES_IBK_2006_T2
+2017-05-12 11:07:44 -0500,Tino Reyna,<t.reyna@iqcorpgroup.com>,e8983b016f2023066755a813054dbcc87f0b5554,origin/FUENTES_IBK_2006_T1 ,unmerged
+2017-05-02 12:24:08 -0500,Tino Reyna,<t.reyna@iqcorpgroup.com>,1f709a00555a1446daad7d4ca5847ba6d340d3b8,origin/FUENTES_IBK_2005_T1 ,unmerged
+2017-05-02 12:05:35 -0500,Tino Reyna,<t.reyna@iqcorpgroup.com>,a93c2c2e3b510e03001d49c7c0f5aac4c03610f1,origin/FUENTES_IBK_2004_T1 ,unmerged
+2017-04-25 15:23:31 -0500,Tino Reyna,<t.reyna@iqcorpgroup.com>,3e0b25607e408d578f556c080c3d818a5d4b6278,origin/FUENTES_IBK_2005_T2
+=== Tags ===
+=== Last commit ===
+2017-08-07 17:23:08 -0500,Tino Reyna,<t.reyna@iqcorpgroup.com>,a21746b01d1ebdddd33553ffde3b681fae5626cd
+=== Last month messages ===
+Tino Reyna (1):
+      a21746b,Archivos faltantes agregados
+
+ 
+ 
+***** POS_INGE_C_TELIUM_GCS ******
+=== Branches ===
+2017-08-24 16:15:45 -0500,Tino Reyna,<t.reyna@iqcorpgroup.com>,24569f5a71c3fd2e84f3e37ebcb26ecc39522c28,origin/v2003 ,unmerged
+2017-08-23 14:20:22 -0500,Tino Reyna,<t.reyna@iqcorpgroup.com>,e738ceb4d695f4099abd321af9a158fe8a0d3dcd,origin/v2004 ,unmerged
+2017-07-04 12:23:04 -0500,Oswaldo Morizaki,<o.morizaki@iqcorpgroup.com>,4a36ee75984e8e95cd0fd11659019b1b2f0ffaf9,origin/sdk9.32 ,unmerged
+2017-04-19 10:21:21 -0500,Oswaldo Morizaki,<o.morizaki@iqcorpgroup.com>,edcc17aa47c9f86db6de72f54dbbdc945b5246ff,origin/v2002
+2017-04-19 10:21:21 -0500,Oswaldo Morizaki,<o.morizaki@iqcorpgroup.com>,edcc17aa47c9f86db6de72f54dbbdc945b5246ff,origin/master
+=== Tags ===
+2016-10-05 16:29:09 -0500,Oswaldo Morizaki,<o.morizaki@iqcorpgroup.com>,4a2aeef2c90d0c3b87fe7765ca199b5ae04f8437,r2000
+2016-11-21 12:44:26 -0500,Oswaldo Morizaki,<o.morizaki@iqcorpgroup.com>,682a5a81ee4e9f0a4382580b30dec023c5c681e4,r2001
+2017-05-26 14:49:37 -0500,Oswaldo Morizaki,<o.morizaki@iqcorpgroup.com>,edcc17aa47c9f86db6de72f54dbbdc945b5246ff,r2002
+=== Last commit ===
+2017-08-24 16:15:45 -0500,Tino Reyna,<t.reyna@iqcorpgroup.com>,24569f5a71c3fd2e84f3e37ebcb26ecc39522c28
+2017-07-14 11:51:32 -0500,Oswaldo Morizaki,<o.morizaki@iqcorpgroup.com>,25a3f46eaf5842010f46eb633f402c9f2d7e426b
+=== Last month messages ===
+Tino Reyna (19):
+      fc7ab5d,Cambios para microseguro
+      9f0f4a8,Cambios para microseguro
+      c5a0d39,Cambios para microseguro
+      7a32b3e,Cambios para microseguro
+      d4583e1,Cambios para version temporal sin microseguro
+      a8a049d,Microseguro: solicita tambien celular
+      d05fee9,Cambios v2003
+      9fd4f41,IQBuild.h
+      e0c1b85,Cambios pendientes
+      a00ab5e,Cambios recientes annadidos
+      cda4eab,Se agrega PRD_GCS.patch
+      b8cd833,Cambios en parametros
+      1bd99ea,Cambios recientes
+      e88bcd3,Cambios pendientes
+      af773d5,Cambio pendiente
+      cde1a22,BuildInfo update.
+      e738ceb,Cambios Microseguro
+      3ae9167,IQBuild update.
+      24569f5,Correccion reporte exitosas para reimpresion
+
+ 
+ 
+***** SRT_VSNET_SRT18_ADAPT_IBK ******
+=== Branches ===
+2017-05-05 16:38:07 -0500,Vimazac,<vzanabria@iqcg.pe>,7c801bcdfa6ed6c7b571c632132bcb16af87db59,origin/UAT8 ,unmerged
+2017-05-05 16:31:36 -0500,Vimazac,<vzanabria@iqcg.pe>,6cff2ddf40888355a19815ed9a05b14efa5a08b3,origin/UAT7 ,unmerged
+2017-05-05 16:23:31 -0500,Vimazac,<vzanabria@iqcg.pe>,ac40b6dc45770157e4eaf5faa4fd078900a19f96,origin/master
+=== Tags ===
+=== Last commit ===
+2017-05-05 16:38:07 -0500,Vimazac,<vzanabria@iqcg.pe>,7c801bcdfa6ed6c7b571c632132bcb16af87db59
+=== Last month messages ===
+ 
+ 
+***** SRT_VSNET_SRT42_ADAPT_IBK ******
+=== Branches ===
+2017-04-27 16:32:37 -0500,Vimazac,<vzanabria@iqcg.pe>,6ca6bdc8d25c57d803da5792ebc4b188caf0d15f,origin/master
+=== Tags ===
+=== Last commit ===
+2017-04-27 16:32:37 -0500,Vimazac,<vzanabria@iqcg.pe>,6ca6bdc8d25c57d803da5792ebc4b188caf0d15f
+2017-04-27 12:40:49 -0500,unknown,<vzanabria@LTIQ022.iqcorpsac.local>,e4dbc4cd992af3432c78483834884b76dcf1fcde
+=== Last month messages ===
+ 
+ 
+***** SRT_VSNET_SRT43_FORMT_GCS ******
+=== Branches ===
+2017-05-03 15:30:03 -0500,Vimazac,<vzanabria@iqcg.pe>,7f39cb6e54868aa74997bbdc8d2da1dc49823bb1,origin/master
+=== Tags ===
+=== Last commit ===
+2017-05-03 15:30:03 -0500,Vimazac,<vzanabria@iqcg.pe>,7f39cb6e54868aa74997bbdc8d2da1dc49823bb1
+=== Last month messages ===
+ 
+ 
+***** SAT_ANG_GCS ******
+=== Branches ===
+2017-06-27 14:31:07 -0500,Juan_Velarde,<juan_10_10_91@hotmail.com>,009b4d3ef364bebb4af65704f55e539c852786dd,origin/SPRIN-7-PROGRAMACIONES-ROLES-USUARIOS ,unmerged
+2017-05-15 11:05:45 -0500,Juan_Velarde,<juan_10_10_91@hotmail.com>,e32dcfe8a9a64474edb52d1a255b0b15ac55161e,origin/master
+2017-05-11 10:44:37 -0500,Juan_Velarde,<juan_10_10_91@hotmail.com>,728974f6a3d9d64a85fc08f7e6b0accd359c6c85,origin/SPRINT-6-PUNTOS-SERVICIO-WALLETS
+2017-02-17 17:29:55 -0500,unknown,<vzanabria@LTIQ022.iqcorpsac.local>,452ebea81ec1984228d48ca56b87724a913bf0dc,origin/wpupdate
+=== Tags ===
+=== Last commit ===
+2017-06-27 14:31:07 -0500,Juan_Velarde,<juan_10_10_91@hotmail.com>,009b4d3ef364bebb4af65704f55e539c852786dd
+2017-05-22 17:22:00 -0500,Vimazac,<vzanabria@iqcg.pe>,61bde041f50d819490b450c7233e04aaae007e97
+2017-05-22 17:22:00 -0500,Vimazac,<vzanabria@iqcg.pe>,61bde041f50d819490b450c7233e04aaae007e97
+2017-03-08 11:31:03 -0500,unknown,<vzanabria@LTIQ022.iqcorpsac.local>,38fd8892ef1a150395edae345050e7ba52e95155
+2017-02-15 15:20:46 -0500,Evelyn Torres,<e.torres@iqcorpgroup.com>,117e227c0b828ff096ebe960d2b9800213a0417f
+=== Last month messages ===
+ 
+ 
+***** SAT_VSNET_MULTI ******
+=== Branches ===
+2017-07-25 12:50:27 -0500,mpuelles,<mpuelles@iqcg.pe>,158370266b69427e572244773fad14671040e9e1,origin/master
+=== Tags ===
+=== Last commit ===
+2017-07-25 12:50:27 -0500,mpuelles,<mpuelles@iqcg.pe>,158370266b69427e572244773fad14671040e9e1
+=== Last month messages ===
+mpuelles (1):
+      1583702,Archivos iniciales de IQSAT
+
+ 
+ 
+***** SAT_VSNET_WSIN_GCS ******
+=== Branches ===
+2017-06-28 14:56:03 -0500,Evelyn Torres,<e.torres@iqcorpgroup.com>,327701a2dfb4ef5695fe5ac80a1a393a9c9fe16f,origin/Sprint7
+2017-06-28 14:56:03 -0500,Evelyn Torres,<e.torres@iqcorpgroup.com>,327701a2dfb4ef5695fe5ac80a1a393a9c9fe16f,origin/master
+2017-05-11 10:30:48 -0500,Evelyn Torres,<etorres@iqcorpsac.local>,58a3a766fec73bb3123ee207f1af8ceaf805124e,origin/Sprint6
+=== Tags ===
+=== Last commit ===
+2017-06-28 14:56:03 -0500,Evelyn Torres,<e.torres@iqcorpgroup.com>,327701a2dfb4ef5695fe5ac80a1a393a9c9fe16f
+2017-06-02 11:37:24 -0500,Evelyn Torres,<etorres@iqcorpsac.local>,5357dea2426d4ec5f5d24e549eb8c04721c6a930
+2017-03-15 10:10:59 -0500,Juan_Velarde,<juan_10_10_91@hotmail.com>,a276b154fce0d8c5c04e5ae2b2573da45e3b1132
+2017-03-09 11:04:05 -0500,Evelyn Torres,<evelyn.etr@gmail.com>,d29d32cef33d3f17430801835165bf16fc2b31f8
+=== Last month messages ===
+ 
+ 
+***** SAT_VSNET_WSIN_MULTI ******
+=== Branches ===
+2017-08-24 16:40:36 -0500,Evelyn Torres,<e.torres@iqcorpgroup.com>,3b1b98401fcaeea906748d1a82e9a12535a712f2,origin/Sprint4
+2017-08-24 16:40:36 -0500,Evelyn Torres,<e.torres@iqcorpgroup.com>,3b1b98401fcaeea906748d1a82e9a12535a712f2,origin/master
+=== Tags ===
+=== Last commit ===
+2017-08-24 16:40:36 -0500,Evelyn Torres,<e.torres@iqcorpgroup.com>,3b1b98401fcaeea906748d1a82e9a12535a712f2
+=== Last month messages ===
+Evelyn Torres (3):
+      547e34a,Funcionalidad del servicio Listado y Mantenimiento del Punto de Servicio Culminado
+      91a6177,Funcionalidad del servicio Programaciones
+      3b1b984,Cambios realizados En el Sprint 3 Incluye: Terminales y TipoTerminales - No realice un Branch por este sprint.
+
+ 
+ 
+***** LIBRE_DROID_PERIF_DESA ******
+=== Branches ===
+2017-08-01 12:30:02 -0500,Oswaldo Morizaki,<o.morizaki@iqcorpgroup.com>,e3a92efff914f0af3d27778e38f733ef22579ada,origin/master
+=== Tags ===
+=== Last commit ===
+2017-08-01 12:30:02 -0500,Oswaldo Morizaki,<o.morizaki@iqcorpgroup.com>,e3a92efff914f0af3d27778e38f733ef22579ada
+=== Last month messages ===
+Oswaldo Morizaki (1):
+      e3a92ef,Util:   Added gradle directory, with wrappers.
+
+ 
+ 
+***** MPOS_DROID_DESA ******
+=== Branches ===
+2017-07-17 11:05:04 -0500,Alexander,<japl600@gmail.com>,a5d0490500a3495300dcca57a3bde6d1dc7a9364,origin/retail ,unmerged
+2017-07-07 12:03:25 -0500,Alexander,<japl600@gmail.com>,4cdfd163651d1da80e36a194ae50ccf358aadc65,origin/newXML ,unmerged
+2017-07-05 09:43:48 -0500,Oswaldo Morizaki,<o.morizaki@iqcorpgroup.com>,4ec5241344ff9d60d1d8c69abce63ed77486e463,origin/demoSullana ,unmerged
+2017-07-04 10:45:57 -0500,Alexander,<japl600@gmail.com>,f32136288dc17d227bd729f680909e9ad9bae931,origin/N900 ,unmerged
+2017-06-20 12:13:31 -0500,Alexander,<japl600@gmail.com>,120fce19f4c0aa8be4ea6e3bf4401cdbbb3cef8f,origin/master
+2017-05-23 16:05:24 -0500,Alexander,<japl600@gmail.com>,72a9722cc07af63d9832e83ee8eafb8db98f39fd,origin/gcs ,unmerged
+=== Tags ===
+=== Last commit ===
+2017-07-17 11:05:04 -0500,Alexander,<japl600@gmail.com>,a5d0490500a3495300dcca57a3bde6d1dc7a9364
+2017-07-05 09:43:48 -0500,Oswaldo Morizaki,<o.morizaki@iqcorpgroup.com>,4ec5241344ff9d60d1d8c69abce63ed77486e463
+=== Last month messages ===
+ 
+ 
+***** MPOS_N900_DROID_SULL ******
+=== Branches ===
+2017-07-24 12:32:59 -0500,Alexander Prada,<japl600@gmail.com>,316e5e8c2eaf95b0bbf596908206190828507385,origin/master
+=== Tags ===
+=== Last commit ===
+2017-07-24 12:32:59 -0500,Alexander Prada,<japl600@gmail.com>,316e5e8c2eaf95b0bbf596908206190828507385
+=== Last month messages ===
+ 
+ 
+***** WPOS_XAC_DROID_BBVA ******
+=== Branches ===
+2017-04-25 16:02:39 -0500,Oswaldo Morizaki,<o.morizaki@iqcorpgroup.com>,713e72db7a805891329c27ec5e200eae10928cf3,origin/track2 ,unmerged
+2017-04-20 18:49:55 -0500,Alexander Prada,<japl600@gmail.com>,78eecefc60c057243846917a1898427dfbbbf47d,origin/reader ,unmerged
+2017-04-20 14:32:51 -0500,Oswaldo Morizaki,<o.morizaki@iqcorpgroup.com>,34872a671a4c6b6040fd4031205f5ed28b1433c0,origin/barcode ,unmerged
+2017-04-17 11:15:43 -0500,Oswaldo Morizaki,<o.morizaki@iqcorpgroup.com>,73d5f4cab615e18c4645a1c1d0b30599689e9ac7,origin/master
+=== Tags ===
+2017-03-17 15:17:35 -0500,Oswaldo Morizaki,<o.morizaki@iqcorpgroup.com>,0a538cc18c6a3b24ac5f5ef530258df5465e554d,Oswaldo
+=== Last commit ===
+2017-04-25 16:02:39 -0500,Oswaldo Morizaki,<o.morizaki@iqcorpgroup.com>,713e72db7a805891329c27ec5e200eae10928cf3
+2017-04-20 18:49:55 -0500,Alexander Prada,<japl600@gmail.com>,78eecefc60c057243846917a1898427dfbbbf47d
+2017-03-13 15:15:34 -0500,Evelyn Torres,<etorres@iqcorpsac.local>,b4c3024851c494c71595afea574a785b1b3f67ed
+2017-02-28 11:02:41 -0500,Evelyn Torres,<e.torres@iqcorpgroup.com>,39dc08d8e9d6740d45c22e7fe64669757e633f4c
+=== Last month messages ===
+ 
+ 
+***** IQCAM_DROID_DESA ******
+=== Branches ===
+2017-08-24 17:18:46 -0500,Juan_Velarde,<juan_10_10_91@hotmail.com>,745e800f30b52e30525e8a0e470794e4524735e9,origin/master
+=== Tags ===
+=== Last commit ===
+2017-08-24 17:18:46 -0500,Juan_Velarde,<juan_10_10_91@hotmail.com>,745e800f30b52e30525e8a0e470794e4524735e9
+=== Last month messages ===
+Juan_Velarde (1):
+      745e800,Primer comit
+
+ 
+ 
+***** IQCM_VSNET_IBK ******
+=== Branches ===
+2017-08-22 17:13:34 -0500,gjacinto,<gjacinto@LTIQ014>,7f416aa13b30ac776e01c1068dd1ef6f6d2c6aa9,origin/DSR-MultiInstitucion ,unmerged
+2017-07-05 12:27:00 -0500,gjacinto,<gjacinto@LTIQ014>,536cbd501c0723d2b3e43c7c9908b06e00911049,origin/DSR-Comisiones ,unmerged
+2017-07-03 16:12:45 -0500,mpuelles,<mpuelles@iqcg.pe>,2dbfd83aa1015371b3cf494b8999bceac3af1bda,origin/master
+2017-07-03 16:12:45 -0500,mpuelles,<mpuelles@iqcg.pe>,2dbfd83aa1015371b3cf494b8999bceac3af1bda,origin/DSR-Soporte
+2017-06-22 15:47:46 -0500,mpuelles,<mpuelles@iqcg.pe>,62c182f1419779954ee7b321b764537d815adec0,origin/UAT-3.0.0
+2017-05-19 15:07:22 -0500,mpuelles,<mpuelles@iqcg.pe>,6485efbdbfb4ee01e8e38a8311c10cc61a9a85a1,origin/DSR-Reportes
+=== Tags ===
+2017-07-25 12:36:38 -0500,tagger mpuelles,<mpuelles@iqcg.pe>,f62abf6e79f3380a87e6a61ec1ea1a56377f82c0,v3.0.0
+2017-07-25 12:30:50 -0500,tagger mpuelles,<mpuelles@iqcg.pe>,3ccca32542e2415295ea9f6ab54d795f40aca0ba,v3.0.1
+2017-07-25 12:31:29 -0500,tagger mpuelles,<mpuelles@iqcg.pe>,f9a6c73e316753649dc9d353dd51c6530189c6e0,v3.0.2
+=== Last commit ===
+2017-08-22 17:13:34 -0500,gjacinto,<gjacinto@LTIQ014>,7f416aa13b30ac776e01c1068dd1ef6f6d2c6aa9
+2017-08-21 12:10:03 -0500,ivelarde@iqcg.pe,<ivelarde@iqcg.pe>,3557f3a5b0efa1076a359009f3134d0e920d1a35
+2017-07-03 16:12:45 -0500,mpuelles,<mpuelles@iqcg.pe>,2dbfd83aa1015371b3cf494b8999bceac3af1bda
+2017-05-15 13:13:59 -0500,ivanvelarde1980,<isvelarder@gmail.com>,2b2b4d69e13355f522a6d4191219f461824fe056
+=== Last month messages ===
+gjacinto (7):
+      56cfeef,Modificación de los formularios de almacen para soporte a multi instituciones
+      dbe8919,Actualizaciones para el soporte de Multi instituciones Tranferencia de equipos entre almacenes, comprometer equipos en la atenciones, configuracion de almacenes
+      6e6ced9,actualizaciones para multi instituciones
+      09da1de,actualizacion del formulario de configuracion de almacenes
+      0dd8394,Cambios en los formularios de ejecutivos comerciales y zonas geograficas para que soporte multi instituciones
+      c25c3e6,Actualización de zonas geográficas para asociar ubigeos
+      7f416aa,Merge branch 'DSR-MultiInstitucion' of ssh://clt-415d5088-5c9c-488c-b9b7-6a9873127c28.visualstudio.com:22/_git/IQCM_VSNET_IBK into DSR-MultiInstitucion
+
+ivelarde@iqcg.pe (5):
+      cbf527c,Actualización de codigo
+      c7263d5,Merge branch 'DSR-MultiInstitucion' of ssh://clt-415d5088-5c9c-488c-b9b7-6a9873127c28.visualstudio.com:22/_git/IQCM_VSNET_IBK into DSR-MultiInstitucion
+      73ae3cc,Actualización de codigo
+      0505763,Modificacion de codigo
+      3557f3a,Merge branch 'DSR-MultiInstitucion' of ssh://clt-415d5088-5c9c-488c-b9b7-6a9873127c28.visualstudio.com:22/_git/IQCM_VSNET_IBK into DSR-MultiInstitucion
+
+ 
+ 
+***** IQMOB_DROID_DESA ******
+=== Branches ===
+2017-08-24 15:55:34 -0500,Juan_Velarde,<juan_10_10_91@hotmail.com>,871ea9f77b17793b844edd2ef237daa1d018d220,origin/master
+=== Tags ===
+=== Last commit ===
+2017-08-24 15:55:34 -0500,Juan_Velarde,<juan_10_10_91@hotmail.com>,871ea9f77b17793b844edd2ef237daa1d018d220
+=== Last month messages ===
+Juan_Velarde (6):
+      382e0e4,Primer commit repositorio AZURE
+      ccc2881,Subiendo código segunda parte
+      39b2364,Tercer commit de pruebas
+      2b34ab6,Configurando gradle
+      a602fa1,gitignore modificado
+      871ea9f,version estable
+
+ 
+ 
+***** IQMOB_DROID_IBK ******
+=== Branches ===
+2017-08-24 15:55:34 -0500,Juan_Velarde,<juan_10_10_91@hotmail.com>,871ea9f77b17793b844edd2ef237daa1d018d220,origin/master
+=== Tags ===
+=== Last commit ===
+2017-08-24 15:55:34 -0500,Juan_Velarde,<juan_10_10_91@hotmail.com>,871ea9f77b17793b844edd2ef237daa1d018d220
+=== Last month messages ===
+Juan_Velarde (6):
+      382e0e4,Primer commit repositorio AZURE
+      ccc2881,Subiendo código segunda parte
+      39b2364,Tercer commit de pruebas
+      2b34ab6,Configurando gradle
+      a602fa1,gitignore modificado
+      871ea9f,version estable
+
+ 
+ 
+***** IQMOB_VSNET_WSIN_DESA ******
+=== Branches ===
+2017-07-31 12:21:42 -0500,Juan_Velarde,<juan_10_10_91@hotmail.com>,de84f7adcee35bd21dd80d0aa0e4e5d0b9abadca,origin/master
+=== Tags ===
+=== Last commit ===
+2017-07-31 12:21:42 -0500,Juan_Velarde,<juan_10_10_91@hotmail.com>,de84f7adcee35bd21dd80d0aa0e4e5d0b9abadca
+=== Last month messages ===
+Juan_Velarde (1):
+      de84f7a,Commit estable
+
+ 
+ 
+***** IQMOB_VSNET_WSIN_IBK ******
+Empty repo
+ 
+ 
+***** IQSM_VSNET_IBK ******
+=== Branches ===
+2017-07-19 12:32:22 -0500,ivelarde@iqcg.pe,<ivelarde@iqcg.pe>,2880221b79b71a9ad77c8a62e122aa658114032f,origin/dsr-multiinstitucion ,unmerged
+2017-07-14 13:05:34 -0500,ivelarde@iqcg.pe,<ivelarde@iqcg.pe>,fda578ff876da56ef6df5c359b6a1a0e56a171f5,origin/DSR-IQSM ,unmerged
+2017-07-14 13:02:34 -0500,mpuelles,<mpuelles@iqcg.pe>,62386f15b13145cfacb427b2fbc3d7b69abc8f73,origin/master
+=== Tags ===
+=== Last commit ===
+2017-07-19 12:32:22 -0500,ivelarde@iqcg.pe,<ivelarde@iqcg.pe>,2880221b79b71a9ad77c8a62e122aa658114032f
+2017-07-14 13:02:34 -0500,mpuelles,<mpuelles@iqcg.pe>,62386f15b13145cfacb427b2fbc3d7b69abc8f73
+=== Last month messages ===
+ 
+ 
