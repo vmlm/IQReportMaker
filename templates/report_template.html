@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Reporte de control de repositorio, {{ reportmonth }} de {{ reportyear }}</title>
+    <title>{{ report_name }}, {{ month }} de {{ year }}</title>
 </head>
 <style type="text/css">
     .header-cont {
@@ -190,7 +190,7 @@
     {% endif %}
     <div class="header-cont">
         <div class="header">
-            <h1>IQ Reporte de repositorios, {{ reportmonth }} de {{ reportyear }}</h1>
+            <h1>IQ {{ report_name }}, {{ month }} de {{ year }}</h1>
         </div>
     </div>
 
@@ -301,7 +301,7 @@
                     <tr>
                         <td colspan="4">
                             {% for message in repo.messages%}
-                            {{ message }}<br>
+                            &emsp;{{ message }}<br>
                             {% else %}
                             No hay mensajes
                             {% endfor %}
