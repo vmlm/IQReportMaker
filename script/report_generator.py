@@ -1,9 +1,10 @@
 import jinja2
-import re
 import git
 import os
 from datetime import datetime
 import locale
+import LogMaker
+from LogMaker import BranchLogMaker, TagLogMaker, LastCommitsLogMaker
 # import argparse
 
 URL_LIST_FILENAME = 'url_list'
@@ -12,110 +13,6 @@ REPOS_PATH = 'Y:/repos'
 OUTPUT_PATH = '../output/reportoutput.html'
 TEMPLATES_PATH = '../templates'
 TEMPLATE_USED = 'report_template.html'
-
-
-def process_gitdate(date_string):
-    return datetime.strptime(date_string,
-                             '%Y-%m-%d %H:%M:%S %z'
-                             ).strftime('%d/%m/%Y')
-
-
-def process_subject(subject_string, max_len):
-    subject_string = subject_string\
-        if len(subject_string) < max_len\
-        else subject_string[:max_len - 1].strip() + '...'
-    return subject_string
-
-
-def get_branch_info(repo):
-    branches = []
-    info_finder = re.compile('(?P<date>[^,]*),'
-                             '(?P<author>[^,]*),'
-                             '<(?P<email>[^,]*)>,'
-                             '(?P<hash>[a-z0-9]*),'
-                             '(?P<subject>.*)')
-    branch_names = [x.name for x in repo.remotes.origin.refs
-                    if 'HEAD' not in x.name]
-    for branch_name in branch_names:
-        commit_info = repo.git.show('--format=%ci,%cn,<%ce>,%H,%s',
-                                    branch_name).splitlines()[0]
-        extracted = info_finder.match(commit_info)
-        if extracted is not None:
-            content = extracted.groupdict()
-            content['name'] = branch_name
-            content['date'] = process_gitdate(content['date'])
-            content['hash'] = content['hash'][:6]
-            if branch_name not in repo.git.branch('-a', '--no-merged'):
-                content['merged'] = False
-            else:
-                content['merged'] = True
-            branches.append(content)
-    if branches:
-        branches.sort(key=lambda k: k['date'], reverse=True)
-    return branches
-
-
-def get_tag_info(repo):
-    tags = []
-    info_finder = re.compile('(?P<date>[^,]*),'
-                             '(?P<author>[^,]*),'
-                             '<(?P<email>[^,]*)>,'
-                             '(?P<hash>[a-z0-9]*),'
-                             '(?P<subject>.*)')
-#   iterate over all non head lines
-    for tag_name in [x.name for x in repo.tags]:
-        commit_info = repo.git.log('-n1',
-                                   '--format=%ai,%an,<%ae>,%H,%s',
-                                   tag_name)
-        extracted = info_finder.match(commit_info)
-        if extracted is not None:
-            content = extracted.groupdict()
-            content['name'] = tag_name
-            content['date'] = process_gitdate(content['date'])
-            content['hash'] = content['hash'][:6]
-            tags.append(content)
-    if tags:
-        tags.sort(key=lambda k: k['date'], reverse=True)
-    return tags
-
-
-def get_commit_log(repo):
-    commits = []
-    itemlist_getter = (repo.git.shortlog, ('-sne', '--all'), splitlines=True)
-    item_finder = (pattern='(<.*>)', params="", method='search')
-    info_finder = (pattern='(<.*>)', params="", method='match')
-    
-
-
-
-def get_lastcommit_info(repo):
-    last_commits = []
-    shortlog_out = repo.git.shortlog('-sne', '--all').splitlines()
-    email_finder = re.compile('(<.*>)')
-    info_finder = re.compile('(?P<date>[^,]*),'
-                             '(?P<author>[^,]*),'
-                             '<(?P<email>[^,]*)>,'
-                             '(?P<hash>[a-z0-9]*),'
-                             '(?P<subject>.*)')
-#   iterate over all non head lines
-    for match in map(email_finder.search, shortlog_out):
-        author_email = match.group(0)
-        commit_hash = repo.git.log('-n1',
-                                   '--all',
-                                   '--committer={}'.format(author_email)
-                                   ).splitlines()[0].split()[1]
-        commit_info = repo.git.show('--format=%ci,%cn,<%ce>,%H,%s',
-                                    commit_hash).splitlines()[0]
-        extracted = info_finder.match(commit_info)
-        if extracted is not None:
-            content = extracted.groupdict()
-            content['date'] = process_gitdate(content['date'])
-            content['subject'] = process_subject(content['subject'],
-                                                 max_len=45)
-            last_commits.append(content)
-    if last_commits:
-        last_commits.sort(key=lambda k: k['date'], reverse=True)
-    return last_commits
 
 
 def get_messages_info(repo):
@@ -140,7 +37,7 @@ def get_authors(repo_info):
     return authors
 
 
-def make_json(repos_list, repos_path):
+def make_repos_json(repos_list, repos_path):
     repos = []
     repo_num = 1
     for repo_name in repos_list:
@@ -158,9 +55,12 @@ def make_json(repos_list, repos_path):
                 current_repo_info['status'] = 'empty'
             else:
                 current_repo_info['status'] = 'ok'
-                current_repo_info['branches'] = get_branch_info(repo)
-                current_repo_info['tags'] = get_tag_info(repo)
-                current_repo_info['lastcommits'] = get_lastcommit_info(repo)
+                current_repo_info['branches'] = \
+                    LogMaker.make_log(repo, BranchLogMaker())
+                current_repo_info['tags'] = \
+                    LogMaker.make_log(repo, TagLogMaker())
+                current_repo_info['lastcommits'] = \
+                    LogMaker.make_log(repo, LastCommitsLogMaker())
                 current_repo_info['messages'] = [process_subject(
                                                  x.replace('      ',
                                                            '&emsp;'), 58)
@@ -198,7 +98,7 @@ if __name__ == "__main__":
 #   parser = setup_parser()
 #   opts = parser.parse_args()
     repos_list = get_repos_list(URL_LIST_FILENAME, REPOS_PATH)
-    repos_json = make_json(repos_list, REPOS_PATH)
+    repos_json = make_repos_json(repos_list, REPOS_PATH)
     report = jinja_env.get_template(TEMPLATE_USED)
     month, year = get_monthyear(datetime.today())
     htmltxt = report.render(reportmonth=month,
