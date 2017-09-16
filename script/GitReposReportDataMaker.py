@@ -5,7 +5,7 @@ import os
 import git
 
 
-class GitReposDataMaker(ReportDataMaker):
+class GitReposReportDataMaker(ReportDataMaker):
 
     def __init__(self):
         self.info_getters = [
