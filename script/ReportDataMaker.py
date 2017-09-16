@@ -4,6 +4,7 @@ from abc import ABC, abstractmethod
 
 class ReportDataMaker(ABC):
     info_processors = []
+    info_aggregators = []
 
     def make_data(self, source, report_name):
         json_out = {

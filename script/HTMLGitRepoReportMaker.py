@@ -1,7 +1,6 @@
-import jinja2
 import locale
-from GitReposDataMaker import GitReposDataMaker
-from ReportMaker import ReportMaker
+from GitReposReportDataMaker import GitReposReportDataMaker
+from HTMLReportMaker import HTMLReportMaker
 # import argparse
 
 URL_LIST_FILENAME = 'url_list'
@@ -10,19 +9,13 @@ REPOS_PATH = 'C:/Users/vlara/Documents/repo_report/repos'
 OUTPUT_PATH = '../output/reportoutput.html'
 
 
-class HTMLGitRepoReportMaker(ReportMaker):
+class HTMLGitRepoReportMaker(HTMLReportMaker):
 
     def __init__(self):
-        self.reportdatamaker = GitReposDataMaker()
+        self.reportdatamaker = GitReposReportDataMaker()
         self.template_path = r'../templates'
         self.template_filename = 'report_template.html'
         self.report_name = 'Reporte de repositorios'
-
-    def _make_report(self, source):
-        jinja_env = jinja2.Environment(loader=jinja2.
-                                       FileSystemLoader(self.template_path))
-        report_renderer = jinja_env.get_template(self.template_filename)
-        return report_renderer.render(**source).encode('utf-8')
 
 
 # def setup_parser():
