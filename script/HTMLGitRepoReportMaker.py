@@ -4,8 +4,8 @@ from HTMLReportMaker import HTMLReportMaker
 # import argparse
 
 URL_LIST_FILENAME = 'url_list'
-# REPOS_PATH = 'Y:/repos'
-REPOS_PATH = 'C:/Users/vlara/Documents/repo_report/repos'
+REPOS_PATH = 'Y:/repos'
+# REPOS_PATH = 'C:/Users/vlara/Documents/repo_report/repos'
 OUTPUT_PATH = '../output/reportoutput.html'
 
 
