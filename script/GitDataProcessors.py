@@ -121,5 +121,5 @@ class GitMessagesProcessor(DataProcessor):
         messages_info = source.git.shortlog('--since=last month',
                                             '--all',
                                             '--format=%h,%s').splitlines()
-        return [self.process_subject(x.replace('      ', ''), 58)
+        return [self.process_subject(x.replace('      ', ''), 80)
                 for x in messages_info]

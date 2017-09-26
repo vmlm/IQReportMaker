@@ -11,8 +11,8 @@ class GitReposReportDataMaker(ReportDataMaker):
         self.info_getters = [
             BranchInfoProcessor(),
             TagInfoProcessor(),
-            LastCommitsInfoProcessor()
-#           GitMessagesProcessor(),
+            LastCommitsInfoProcessor(),
+            GitMessagesProcessor()
         ]
         self.info_aggregators = [
             AuthorsAggregator()
