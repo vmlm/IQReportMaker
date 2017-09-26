@@ -178,16 +178,6 @@
     html, body { height: 100%; width: 100%; font-family: Helvetica, Arial, sans-serif; }
 </style>
 <body>
-    {% if repos|length > 1 %}
-    <ul class="navigation">
-        {% for repo in repos %}
-        <li class="nav-item"><a href="#repo{{repo.num}}">{{repo.name}}</a></li>
-        {% endfor %}
-    </ul>
-
-    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-    <label for="nav-trigger"></label>
-    {% endif %}
     <div class="header-cont">
         <div class="header">
             <h1>IQ {{ report_name }}, {{ month }} de {{ year }}</h1>
@@ -196,7 +186,6 @@
 
     <div class="site-wrap">
         <main id="report">
-            {% for repo in repos %}
             <div id="repo{{ repo.num }}">
                 <h2 class="anchor">{{ repo.name }}</h2>
                 <TABLE class="newspaper-a" summary="reporte repo{{ repo.num }}">
@@ -295,6 +284,7 @@
                     </tr>
                     {% endfor %}
                     <!-- MENSAJES -->
+                    {% if repo.messages is defined %}
                     <tr>
                         <th colspan="4" class="subtitle">Mensajes del mes</th>
                     </tr>
@@ -306,7 +296,8 @@
                             No hay mensajes para este mes.
                             {% endfor %}
                         </td>
-                    </tr>                    
+                    </tr>
+                    {% endif %}              
                     <!-- COMENTARIOS -->
                     <tr>
                         <th colspan="4" class="subtitle">Comentarios</th>
@@ -325,9 +316,6 @@
                     {% endif %}
                 </TABLE>
             </div>
-            {% else %}
-            <h2>No hay repositorios que mostrar</h2>
-            {% endfor %}
         </main>        
     </div>
 </body>

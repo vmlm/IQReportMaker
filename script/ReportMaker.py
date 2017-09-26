@@ -9,7 +9,8 @@ class ReportMaker(ABC):
     def _make_report(self, source):
         return NotImplemented
 
-    def make_report(self, source):
-        return self._make_report(self.reportdatamaker.
-                                 make_data(source,
-                                           self.report_name))
+    def make_report(self, **data_obj):
+        return self._make_report(data_obj)
+
+    def make_data(self, source):
+        return self.reportdatamaker.make_data(source, self.report_name)
